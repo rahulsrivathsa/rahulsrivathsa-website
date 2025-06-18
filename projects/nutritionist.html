@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Nutritionist - RahulBot</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: bold;
+            color: #000;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .project-meta {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 3px solid #0066cc;
+        }
+
+        .project-meta p {
+            margin: 0.5rem 0;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-stack {
+            display: inline-block;
+            background-color: #e6f2ff;
+            color: #0066cc;
+            padding: 0.2rem 0.5rem;
+            margin: 0.2rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .security-highlight {
+            background-color: #f0fdf4;
+            border-left: 3px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="../index.html">← Back to main page</a>
+    </div>
+
+    <h1>Personal Nutritionist</h1>
+
+    <div class="project-meta">
+        <p><strong>Status:</strong> Live & Secure</p>
+        <p><strong>Timeline:</strong> June 2025 - Present</p>
+        <p><strong>Live Demo:</strong> <a href="https://my-nutritionist.pages.dev" target="_blank">my-nutritionist.pages.dev</a></p>
+        <p><strong>Tech Stack:</strong> 
+            <span class="tech-stack">HTML/CSS</span>
+            <span class="tech-stack">JavaScript</span>
+            <span class="tech-stack">Firebase Auth</span>
+            <span class="tech-stack">Firestore</span>
+            <span class="tech-stack">OpenAI API</span>
+            <span class="tech-stack">Cloudflare Pages</span>
+        </p>
+    </div>
+
+    <h2>Overview</h2>
+    <p>A web-based nutritionist chatbot that provides personalized nutrition advice using AI. Users can create health profiles with their medical information, dietary preferences, and fitness goals, then chat with an AI nutritionist that tailors advice based on their specific needs.</p>
+
+    <p>The application features user authentication, cross-device profile syncing, and secure API key management - making it both powerful and production-ready.</p>
+
+    <!-- Add screenshot when available -->
+    <!-- 
+    <h2>Screenshots</h2>
+    <img src="../images/nutritionist-chat-interface.png" alt="Personal Nutritionist app showing chat conversation with health profile" class="screenshot">
+    <p class="image-caption">The main chat interface with personalized nutrition advice based on user's health profile</p>
+    
+    <img src="../images/nutritionist-health-profile.png" alt="Health profile form for entering medical information and dietary preferences" class="screenshot">
+    <p class="image-caption">Health profile setup with medical information, dietary preferences, and fitness goals</p>
+    -->
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>AI-powered nutrition advice tailored to individual health profiles</li>
+        <li>User authentication with email/password via Firebase Auth</li>
+        <li>Health profile management with real-time cross-device syncing</li>
+        <li>Secure API key management using environment variables</li>
+        <li>Responsive design that works on desktop and mobile</li>
+        <li>Multi-layered security to prevent unauthorized API usage</li>
+    </ul>
+
+    <h2>What I Built</h2>
+    <ul>
+        <li>A conversational AI interface using OpenAI's GPT-3.5-turbo model</li>
+        <li>User authentication system with Firebase Auth</li>
+        <li>Real-time database integration with Firestore for profile syncing</li>
+        <li>Secure serverless functions for API key management</li>
+        <li>Responsive chat interface with typing indicators and message history</li>
+        <li>Health profile forms with data validation and persistence</li>
+    </ul>
+
+    <h2>What I Learned</h2>
+    <ul>
+        <li>How to integrate multiple APIs (OpenAI, Firebase) in a single application</li>
+        <li>Building secure authentication flows and user management</li>
+        <li>Implementing real-time data synchronization across devices</li>
+        <li>Managing sensitive API keys using environment variables and serverless functions</li>
+        <li>Deploying applications with Cloudflare Pages and automated CI/CD</li>
+        <li>Security best practices for preventing unauthorized API access</li>
+        <li>Using Git for version control and issue tracking</li>
+    </ul>
+
+    <h2>Challenges & Solutions</h2>
+    <p><strong>Challenge:</strong> Discovered unauthorized users were consuming my OpenAI API, leading to unexpected usage and potential costs.</p>
+    <p><strong>Solution:</strong> Implemented comprehensive security measures including authentication requirements, UI disabling when not logged in, server-side validation, and multi-layered API protection. Also secured my OpenAI account with 2FA and replaced compromised API keys.</p>
+
+    <p><strong>Challenge:</strong> Users needed their health profiles available across different devices and browsers.</p>
+    <p><strong>Solution:</strong> Integrated Firebase Firestore for real-time data syncing, with localStorage as a backup for offline functionality.</p>
+
+    <p><strong>Challenge:</strong> Managing sensitive API keys securely without exposing them in the codebase.</p>
+    <p><strong>Solution:</strong> Used Cloudflare Pages environment variables and created a secure serverless endpoint to fetch keys at runtime.</p>
+
+
+    <h2>Technical Architecture</h2>
+    <ul>
+        <li><strong>Frontend:</strong> Vanilla JavaScript with modular class-based architecture</li>
+        <li><strong>Authentication:</strong> Firebase Auth with email/password providers</li>
+        <li><strong>Database:</strong> Firestore for user profiles and settings</li>
+        <li><strong>AI Integration:</strong> OpenAI GPT-3.5-turbo via REST API</li>
+        <li><strong>Hosting:</strong> Cloudflare Pages with automated deployments from GitHub</li>
+        <li><strong>Security:</strong> Environment variables, serverless functions, and multi-layer validation</li>
+    </ul>
+
+    <h2>Current Status</h2>
+    <p>The application is live and fully functional with enterprise-level security. Users can sign up, create detailed health profiles, and receive personalized nutrition advice. The system handles cross-device synchronization seamlessly and protects against unauthorized access.</p>
+
+    <p>All security vulnerabilities have been addressed, and the application now serves as a solid foundation for future enhancements like meal planning features, progress tracking, and integration with fitness apps.</p>
+
+    <h2>Reflections</h2>
+    <p>This project taught me that building production-ready applications involves much more than just making features work. Security, user experience, data persistence, and deployment considerations are equally important.</p>
+
+    <p>The security incident was actually a valuable learning experience - it showed me the importance of thinking like an attacker and implementing defense-in-depth strategies. Going through the process of investigating unauthorized usage, securing API keys, and implementing comprehensive authentication made me a much better developer.</p>
+
+    <p>Most importantly, I learned that complex applications can be built incrementally. Starting with a simple chat interface and gradually adding authentication, database integration, and security features made the project manageable and allowed me to learn each technology thoroughly.</p>
+
+    <div class="back-link" style="margin-top: 3rem;">
+        <a href="../index.html">← Back to main page</a>
+    </div>
+</body>
+</html>
