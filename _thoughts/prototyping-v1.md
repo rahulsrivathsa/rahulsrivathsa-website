@@ -5,7 +5,7 @@ date: 2025-06-27
 description: "An approach to building v1s using ChatGPT Custom GPTs and Claude Projects before full apps"
 ---
 
-# Prototype First: Build AI Tools in Existing Platforms Before Going Custom
+## Prototype First: Build AI Tools in Existing Platforms Before Going Custom
 
 Instead of building custom apps, I prototyped two AI tools using existing platforms:
 
