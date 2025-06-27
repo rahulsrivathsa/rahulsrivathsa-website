@@ -12,28 +12,26 @@ layout: default
 <h2>Projects</h2>
 <p>I've started building in my spare time as a new hobby. A few recent projects:</p>
 
+{% assign projects = site.projects | sort: 'title' %}
+{% for project in projects %}
 <div class="project-item">
-    <div class="project-title"><a href="projects/nutritionist.html">NutrionistGPT [in progress]</a></div>
-    <div class="project-description">Built a chatbot based on my health data to be a personal nutritionist to help me make better eating choices. Built this to learn the basics of building simple apps with AI integrations.</div>
+    <div class="project-title"><a href="{{ project.url }}">{{ project.title }}{% if project.status == "In Progress" %} [in progress]{% endif %}</a></div>
+    <div class="project-description">{{ project.description }}</div>
 </div>
+{% endfor %}
 
 <div class="project-item">
-    <div class="project-title"><a href="projects/chatbot.html">RahulBot</a></div>
-    <div class="project-description">A chatbot built on top of many years of journal entries that can answer questions from a wiser version of myself. Building this to learn about search, RAG, and conversational interfaces.</div>
-</div>
-
-<div class="project-item">
-    <div class="project-title">Workout Tracker [coming soon]</a></div>
+    <div class="project-title">Workout Tracker [coming soon]</div>
     <div class="project-description">Personal fitness tracker for my workouts.</div>
 </div>
 
 <div class="project-item">
-    <div class="project-title">Friendship Manager [coming soon]</a></div>
+    <div class="project-title">Friendship Manager [coming soon]</div>
     <div class="project-description">App to help me better manage my friendships by staying in touch with folks more regularly.</div>
 </div>
 
 <div class="project-item">
-    <div class="project-title">Borrough v2 [coming soon]</a></div>
+    <div class="project-title">Borrough v2 [coming soon]</div>
     <div class="project-description">Re-building Borrough, a peer-to-peer rental marketplace for household items. I co-founded this a couple of years ago but sunset the business in 2024. Re-thinking the idea from ground up based on our learnings.</div>
 </div>
 
@@ -62,7 +60,7 @@ layout: default
 </ul>
 
 <h2>Contact</h2>
-<p>Email me <a href="rahul.srivathsa@gmail.com">here</a>.</p>
+<p>Email me <a href="mailto:rahul.srivathsa@gmail.com">here</a>.</p>
 
 <div class="last-updated">
     Last updated: {{ site.time | date: "%B %Y" }}
