@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Srivathsa</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
         body {
             font-family: Georgia, 'Times New Roman', serif;
@@ -158,5 +159,16 @@
     <div class="last-updated">
         Last updated: June 2025
     </div>
+    <script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+        if (!user) {
+            window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+            });
+        }
+        });
+    }
+    </script>
 </body>
 </html>
