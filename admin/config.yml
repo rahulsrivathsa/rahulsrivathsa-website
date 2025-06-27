@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "thoughts"
+    label: "Blog Posts"
+    folder: "thoughts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["In Progress", "Live & Secure", "Coming Soon"]}
+      - {label: "Timeline", name: "timeline", widget: "string"}
+      - {label: "Live Demo", name: "demo_url", widget: "string", required: false}
+      - {label: "Tech Stack", name: "tech_stack", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
