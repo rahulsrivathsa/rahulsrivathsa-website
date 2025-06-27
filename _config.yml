@@ -1,0 +1,34 @@
+title: Rahul Srivathsa
+email: rahul.srivathsa@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Tech PM turned builder. Thoughts on startups, AI, and learning to code.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Collections
+collections:
+  thoughts:
+    output: true
+    permalink: /thoughts/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

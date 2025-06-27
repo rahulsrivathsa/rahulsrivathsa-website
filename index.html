@@ -1,177 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Srivathsa</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <style>
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fff;
-        }
+---
+layout: default
+---
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            font-weight: normal;
-            color: #000;
-        }
+<h1>Rahul Srivathsa</h1>
 
-        h2 {
-            font-size: 1.2rem;
-            margin: 2rem 0 1rem 0;
-            font-weight: bold;
-            color: #000;
-        }
+<h2>About Me</h2>
+<p> I grew up in Bangalore, India and moved to the US in 2010. I've worked in tech for 10+ years as a PM at companies like Tripadvisor and iAsk.ai.</p>
 
-        p {
-            margin-bottom: 1rem;
-            color: #333;
-        }
+<p> I'm based in Chicago and I enjoy cycling, skiing, yoga, live music, films, and possibly mountain biking very soon.</p>
 
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+<h2>Projects</h2>
+<p>I've started building in my spare time as a new hobby. A few recent projects:</p>
 
-        a:hover {
-            text-decoration: underline;
-        }
+<div class="project-item">
+    <div class="project-title"><a href="projects/nutritionist.html">NutrionistGPT [in progress]</a></div>
+    <div class="project-description">Built a chatbot based on my health data to be a personal nutritionist to help me make better eating choices. Built this to learn the basics of building simple apps with AI integrations.</div>
+</div>
 
-        ul {
-            margin: 1rem 0;
-            padding-left: 0;
-            list-style: none;
-        }
+<div class="project-item">
+    <div class="project-title"><a href="projects/chatbot.html">RahulBot</a></div>
+    <div class="project-description">A chatbot built on top of many years of journal entries that can answer questions from a wiser version of myself. Building this to learn about search, RAG, and conversational interfaces.</div>
+</div>
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+<div class="project-item">
+    <div class="project-title">Workout Tracker [coming soon]</a></div>
+    <div class="project-description">Personal fitness tracker for my workouts.</div>
+</div>
 
-        .project-item {
-            margin-bottom: 1.5rem;
-        }
+<div class="project-item">
+    <div class="project-title">Friendship Manager [coming soon]</a></div>
+    <div class="project-description">App to help me better manage my friendships by staying in touch with folks more regularly.</div>
+</div>
 
-        .project-title {
-            font-weight: bold;
-            color: #000;
-        }
+<div class="project-item">
+    <div class="project-title">Borrough v2 [coming soon]</a></div>
+    <div class="project-description">Re-building Borrough, a peer-to-peer rental marketplace for household items. I co-founded this a couple of years ago but sunset the business in 2024. Re-thinking the idea from ground up based on our learnings.</div>
+</div>
 
-        .project-description {
-            margin-top: 0.5rem;
-            color: #333;
-        }
+{% assign thoughts = site.thoughts | sort: 'date' | reverse %}
+{% if thoughts.size > 0 %}
+<h2>Thoughts</h2>
+<p>I sometimes write about ideas I've explored and things I've learned; a few are listed below:</p>
 
-        .blog-item {
-            margin-bottom: 1rem;
-        }
+<ul>
+    {% for post in thoughts %}
+    <li class="blog-item">
+        <a href="{{ post.url }}">{{ post.title }}</a> <span class="blog-date">({{ post.date | date: "%B %Y" }})</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
 
-        .blog-date {
-            color: #666;
-            font-size: 0.9rem;
-        }
+<h2>Interests</h2>
+<p>This is an incomplete list of topics I'm exploring and reading about</p>
+<ul>
+    <li>Reading Prediction Machines by Ajay Aggarwal</li>
+    <li>Listening to Awareness by Anthony DeMello</li>
+    <li>Listening to Philosophize This! by Stephen West (Aristotle pt 2)</li>
+    <li>Trying out the Essentialism planner by Greg McKeown</li>
+    <li>Watching Andrej Karpathy's intro to LLMs video</li>
+</ul>
 
-        .last-updated {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
+<h2>Contact</h2>
+<p>Email me <a href="rahul.srivathsa@gmail.com">here</a>.</p>
 
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>Rahul Srivathsa</h1>
-
-    <h2>About Me</h2>
-    <p> I grew up in Bangalore, India and moved to the US in 2010. I've worked in tech for 10+ years as a PM at companies like Tripadvisor and iAsk.ai.</p>
-    
-    <p> I'm based in Chicago and I enjoy cycling, skiing, yoga, live music, films, and possibly mountain biking very soon.</p>
-
-    <h2>Projects</h2>
-    <p>I've started building in my spare time as a new hobby. A few recent projects:</p>
-
-    <div class="project-item">
-        <div class="project-title"><a href="projects/nutritionist.html">NutrionistGPT [in progress]</a></div>
-        <div class="project-description">Built a chatbot based on my health data to be a personal nutritionist to help me make better eating choices. Built this to learn the basics of building simple apps with AI integrations.</div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-title"><a href="projects/chatbot.html">RahulBot</a></div>
-        <div class="project-description">A chatbot built on top of many years of journal entries that can answer questions from a wiser version of myself. Building this to learn about search, RAG, and conversational interfaces.</div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-title">Workout Tracker [coming soon]</a></div>
-        <div class="project-description">Personal fitness tracker for my workouts.</div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-title">Friendship Manager [coming soon]</a></div>
-        <div class="project-description">App to help me better manage my friendships by staying in touch with folks more regularly.</div>
-    </div>
-    
-    <div class="project-item">
-        <div class="project-title">Borrough v2 [coming soon]</a></div>
-        <div class="project-description">Re-building Borrough, a peer-to-peer rental marketplace for household items. I co-founded this a couple of years ago but sunset the business in 2024. Re-thinking the idea from ground up based on our learnings.</div>
-    </div>
-
-    <h2>Thoughts</h2>
-    <p>I sometimes write about ideas I've explored and things I've learned; a few are listed below:</p>
-
-    <ul>
-        <li class="blog-item">
-            <a href="thoughts/borrough-learnings.html">Learnings from co-founding Borrough</a> <span class="blog-date">(June 2025)</span>
-        </li>
-        <li class="blog-item">
-            <a href="#">Reflections on the state of AI search</a> <span class="blog-date">(Coming Soon)</span>
-        </li>
-        <li class="blog-item">
-        <a href="thoughts/learnings-from-using-mcps-on-claude.md">Learnings from using MCP on Claude</a> <span class="blog-date">(June 2025)</span>
-        </li>
-    </ul>
-
-    <h2>Interests</h2>
-    <p>This is an incomplete list of topics I'm exploring and reading about</p>
-    <ul>
-        <li>Reading Prediction Machines by Ajay Aggarwal</li>
-        <li>Listening to Awareness by Anthony DeMello</li>
-        <li>Listening to Philosophize This! by Stephen West (Aristotle pt 2)</li>
-        <li>Trying out the Essentialism planner by Greg McKeown</li>
-        <li>Watching Andrej Karpathy's intro to LLMs video</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>Email me <a href="rahul.srivathsa@gmail.com">here</a>.</p>
-
-    <div class="last-updated">
-        Last updated: June 2025
-    </div>
-    <script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-        if (!user) {
-            window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-            });
-        }
-        });
-    }
-    </script>
-</body>
-</html>
+<div class="last-updated">
+    Last updated: {{ site.time | date: "%B %Y" }}
+</div>
