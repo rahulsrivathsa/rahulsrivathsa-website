@@ -8,7 +8,7 @@ layout: default
 
 I grew up in Bangalore, India and moved to the US in 2010. I've worked in tech for 10+ years as a PM at companies like Tripadvisor and iAsk.ai.
 
-I'm based in Chicago and I enjoy cycling, skiing, yoga, live music, films, and possibly mountain biking very soon.
+I'm based in Chicago and I enjoy cycling, skiing, yoga, live music, films, and sci-fi novels.
 
 ## Projects
 
