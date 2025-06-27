@@ -3,7 +3,7 @@ email: rahul.srivathsa@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Tech PM turned builder. Thoughts on startups, AI, and learning to code.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rahulsrivathsa.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
