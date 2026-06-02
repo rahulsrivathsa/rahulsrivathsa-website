@@ -1,17 +1,23 @@
 ---
 layout: post
 title: "Slovenia"
-date: 2025-06-15
-description: "One week through Ljubljana, Lake Bled, and the Soča Valley."
+date: 2026-06-02
+description: "A week in Slovenia through the Soča Valley, Lake Bohinj, the Istrian coast, and Ljubljana"
 location: "Slovenia"
 ---
 
-[Replace with your intro paragraph — set the scene for the trip.]
+Eight days through Slovenia and the Istrian coast. We spend a couple of days in the mountains, then we ditched the car for bikes and rode 75 miles down the coast on the Parenzana trail, and finally finished with a couple of days in Ljubljana.
+
+## Part 1 — Julian Alps
 
 {% include photo.html src="arrival.jpg" caption="Driving into the Julian Alps." %}
 
 [Replace with the paragraph that comes between photos.]
 
 {% include photo.html src="soca-gorge.jpg" caption="On the Soča Gorge trail." %}
+
+## Part 2 — Istrian Coast
+
+## Part 3 — Ljubljana
 
 [Replace with a closing paragraph.]
