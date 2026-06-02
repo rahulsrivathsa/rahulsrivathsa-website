@@ -14,7 +14,7 @@ Landed in Trieste, Italy right at the border of Slovenia and drove into the moun
 
 {% include photo.html src="arrival.jpg" caption="Driving into the Julian Alps." %}
 
-{% include photo-pair.html src1="bovec-1.jpg" caption1="Bovec, Slovinia." src2="bovec-2.jpg" caption2="Made some friends at the local brewery." %}
+{% include photo-pair.html src1="bovec-1.jpg" caption1="Bovec, Slovenia." src2="bovec-2.jpg" caption2="Made some friends at the local brewery." %}
 
 Started the day with a hike at the Soča Gorge.
 
