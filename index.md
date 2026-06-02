@@ -31,6 +31,17 @@ I sometimes write about ideas I've explored and things I've learned; a few are l
 {% endfor %}
 {% endif %}
 
+{% assign trips = site.trips | sort: 'date' | reverse %}
+{% if trips.size > 0 %}
+## Trips
+
+A few trips I've taken and written up:
+
+{% for trip in trips %}
+- [{{ trip.title }}]({{ trip.url }}) ({{ trip.date | date: "%B %Y" }})
+{% endfor %}
+{% endif %}
+
 ## Interests
 
 This is an incomplete list of topics I'm exploring and reading about
