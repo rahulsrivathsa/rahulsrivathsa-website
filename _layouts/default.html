@@ -116,13 +116,28 @@
             text-align: left;
         }
 
+        .photo-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .photo-pair figure.trip-photo {
+            margin: 0;
+        }
+
         @media (max-width: 600px) {
             body {
                 padding: 20px 15px;
             }
-            
+
             h1 {
                 font-size: 2rem;
+            }
+
+            .photo-pair {
+                grid-template-columns: 1fr;
             }
         }
     </style>

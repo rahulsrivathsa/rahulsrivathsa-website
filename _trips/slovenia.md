@@ -16,6 +16,8 @@ Eight days through Slovenia and the Istrian coast. We spend a couple of days in 
 
 {% include photo.html src="soca-gorge.jpg" caption="On the Soča Gorge trail." %}
 
+{% include photo-pair.html src1="soca-gorge-2.jpg" caption1="Replace with a caption." src2="soca-gorge-3.jpg" caption2="Replace with a caption." %}
+
 ## Part 2 — Istrian Coast
 
 ## Part 3 — Ljubljana
