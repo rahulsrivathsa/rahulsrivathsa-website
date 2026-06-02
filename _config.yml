@@ -19,6 +19,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  trips:
+    output: true
+    permalink: /trips/:name/
 
 # Exclude from processing
 exclude:
